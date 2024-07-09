@@ -1,1 +1,2 @@
 # Rusty
+This is stupid
