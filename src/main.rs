@@ -31,5 +31,6 @@ fn main() {
         }
         println!("{} is the number", number);
     }
-    nntm::guess::guess();
+    //nntm::guess::guess();
+    nntm::simplethings::data_types();
 }
