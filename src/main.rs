@@ -39,7 +39,8 @@ fn main() {
         }
         println!("{} is the number", number);
     }
-    nntm::guess::guess();
+    //nntm::guess::guess();
+    nntm::simplethings::data_types();
 }
 
 fn add(x: i8, y:i8) -> i8{
