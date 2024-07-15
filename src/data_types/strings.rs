@@ -1,4 +1,4 @@
-pub fn strings_simplified(){
+pub fn strings_types(){
 
 //There are two types of string in rust.
 

@@ -1,7 +1,4 @@
-//Common programming concepts
-
-
-pub fn data_types(){
+pub fn integer_types(){
     //making x mutable as it is immutable by default;meaning u can change its values now
     let mut x = 4;
     //can change the value now
@@ -37,5 +34,10 @@ println!("{}",x+1); //should print 7,
 // let x:u64=54;// unsigned 64-bit integer
 
 //there are also usize and isize ,i dont know much abt them :(
+
+
+
+let float: f64 = 22.0 / 7.0; //one bit for sign, 8 for exponent, 23 for mantissa, 32 provides 7 decimal digits of precision, 15 for 64, doint just 22/7 cuts the decimal and treats the value as interger 3 in this case
+println!("displaying float {}", float)
 
 }

@@ -21,3 +21,6 @@
 //rustfmt nameOffile.rs(in cmd) 
 //format your rust code
 
+//mod.rs
+-> When you have a directory in rust, you have bunch of sub_modules in it, by declaring those sub_modules in mod.rs it serves as a entry point to the module. 
+-> we can do the similar operation without using mod.rs as well
