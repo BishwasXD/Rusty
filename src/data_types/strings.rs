@@ -38,14 +38,41 @@ println!("{:?}", ptr2); //{:?},  ensures that pointer can be printed in a format
 
 //check palindrome:
 let  pattern: &str = "ababax";
+let mut result: String = String::from(""); //creating a instance of string from String struct. from converts one type into another in this case &str to String.
+let reverse: String = pattern.chars().rev().collect(); //chars convert string in array of char, rev reverses the arr, collect collects the chars from a iterator and converts to a str.(similar to ''.joined(array) method for this case, collect might be more powerful.)
+//now checking logic is easy.
 
-println!("{:?}",pattern.chars()); // return array of chars
-// let mut rev =  String::new();
-// for characters in pattern.chars().rev(){
-//     println!("{}". characters)
-//     rev = rev + characters
-// }
-// if rev == pattern {
-//     prrinln!("palindrome");
-// }
+
+//some ooperation in string:
+//1. concatenation -> push_str(arg); arg can be string or a char, both are valid.
+let mut s = String::from("Hello");
+s.push_str("w");
+println!("{s}");
+
+//using + operator -> The  + operator combines String with a &str to concatenate string, it requires left handed to be string and right handed to be &str
+
+let hello:String = String::from("Hello");
+let world:String = String::from("world");
+let mut concat: String = hello + " " + &world; //here hello is moved, now we cannot access hello, but world is borrowed, which means the type of world is now in &str(in concat variable only).
+// println!("{hello}"); //cant be done
+println!("{world}"); //world has the org data so this is still valid.
+println!("{concat}") ;
+
+//such weird rule exists with + operator, due to efficiency concerns the first str is owned while. the second one is borrowed whoch prevents the unnecessary copying of data. other reasons also exists.
+
+//2. Basic fns related to strings
+let a: &str = "Hello";
+println!("lenght : {}", a.len()); //outputs length(in byte);
+//more about length:
+//for a here the output is 5 and 5 bytes are used to display it(the variable a has all the ascii characters, so 1 byte representation for each char).
+//when a is rep as a array of characters ['h','e','l','l','o'], every char is 4 byte so the length with be 20 byte.
+//when there is a string of emoji(which is not an ascii character, the size of each char will be > than 1byte).
+
+
+println!("bytes : {:?}", a.bytes()); //gives a corresponding byte value assigned to a character, basically gives the UTF-8 encoding of a characters
+// println!("{}", a[0..2]); // this throws err coz the compiler has to know the exact size of the result before printing. the error is prob coz the result was directly used inside of a print statment. 
+let sliced = &a[0..2];
+println!("slices string: {}", sliced);
+
+
 }

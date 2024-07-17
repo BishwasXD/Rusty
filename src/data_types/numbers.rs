@@ -44,7 +44,7 @@ pub fn integer_types() {
     //characters; emoji; and zero-width spaces are all valid char values in Rust.
     //Unicode scalar values range from U+0000 to U+D7FF and U+E000 to
     //U+10FFFF inclusive.
-    let char = 'a'; //use single literals
+    let _char = 'a'; //use single literals
 
     //compound types
     //compound types group multiple values into one type.Types:Tuple Type and Array Type
@@ -52,8 +52,8 @@ pub fn integer_types() {
     let tup: (i32, f64, u8) = (500, 6.4, 1);
 
     //to get individual value
-    let tup = (500, 6.4, 1);
-    let (x, y, z) = tup;
+    let _tup = (500, 6.4, 1);
+    let (_x, y, _z) = tup;
     println!("The value of y is:{y}");
 
     //u can also use (.) to directly get the value
@@ -62,9 +62,9 @@ pub fn integer_types() {
     //The tuple without any values has a special name, unit.
 
     //*The Arrays */
-    let norm_array = [1, 2, 3, 4];
-    let a: [i32; 5] = [1, 2, 3, 4, 5]; //with manual data type and size of array
-    let b = [3; 5]; //array[3,3,3,3,3]
+    let _norm_array = [1, 2, 3, 4];
+    let _a: [i32; 5] = [1, 2, 3, 4, 5]; //with manual data type and size of array
+    let _b = [3; 5]; //array[3,3,3,3,3].  what is this a Matlab?
                     //if u try to access out of bound index from array it will not show garbage value.
 
     //tip: u cant write x=y=4 ,kind of statements
@@ -82,4 +82,8 @@ pub fn integer_types() {
     }
     let result = five();
     println!("{result}");
+
+
+    //NOTE:
+    //use _ in a prefix of a variable name, if u declare it but never use it.
 }
