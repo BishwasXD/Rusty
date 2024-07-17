@@ -8,7 +8,8 @@ pub fn strings_types(){
 //c) The size of the string is known in compile time
 
 //operation in string slice:
-let name: &str = "John Doe";
+let name: &str = "John";
+// name.push_str("Doe"); // cant be done.
 println!("the name is {}", name);
 
 //2 ->(String):
@@ -34,4 +35,17 @@ println!("{:?}", ptr2); //{:?},  ensures that pointer can be printed in a format
 //Display Trait
 //The Display trait in Rust is used for formatting a type in a way that's more user-friendly and readable. 
 //It's typically used when you want to convert an instance of a type to a string and print it out for the user.
+
+//check palindrome:
+let  pattern: &str = "ababax";
+
+println!("{:?}",pattern.chars()); // return array of chars
+// let mut rev =  String::new();
+// for characters in pattern.chars().rev(){
+//     println!("{}". characters)
+//     rev = rev + characters
+// }
+// if rev == pattern {
+//     prrinln!("palindrome");
+// }
 }

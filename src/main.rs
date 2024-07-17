@@ -1,5 +1,5 @@
 
-mod data_types{
+pub mod data_types{
     pub mod strings; 
     pub mod numbers; //approach without declaring in mod.rs, now the files are not treated as module.
 }
