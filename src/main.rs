@@ -7,8 +7,12 @@ mod loops{
     pub mod loops;
    // pub mod fibonacci_loops;
 }
+mod ownership{
+ pub mod ownership;
+}
 
 fn main() {
     data_types::strings::strings_types();
     data_types::numbers::integer_types();
+    ownership::ownership::ownership();
 }
