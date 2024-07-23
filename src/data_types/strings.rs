@@ -38,8 +38,8 @@ println!("{:?}", ptr2); //{:?},  ensures that pointer can be printed in a format
 
 //check palindrome:
 let  pattern: &str = "ababax";
-let mut result: String = String::from(""); //creating a instance of string from String struct. from converts one type into another in this case &str to String.
-let reverse: String = pattern.chars().rev().collect(); //chars convert string in array of char, rev reverses the arr, collect collects the chars from a iterator and converts to a str.(similar to ''.joined(array) method for this case, collect might be more powerful.)
+let mut _result: String = String::from(""); //creating a instance of string from String struct. from converts one type into another in this case &str to String.
+let _reverse: String = pattern.chars().rev().collect(); //chars convert string in array of char, rev reverses the arr, collect collects the chars from a iterator and converts to a str.(similar to ''.joined(array) method for this case, collect might be more powerful.)
 //now checking logic is easy.
 
 
@@ -53,10 +53,10 @@ println!("{s}");
 
 let hello:String = String::from("Hello");
 let world:String = String::from("world");
-let mut concat: String = hello + " " + &world; //here hello is moved, now we cannot access hello, but world is borrowed, which means the type of world is now in &str(in concat variable only).
+let mut _concat: String = hello + " " + &world; //here hello is moved, now we cannot access hello, but world is borrowed, which means the type of world is now in &str(in concat variable only).
 // println!("{hello}"); //cant be done
 println!("{world}"); //world has the org data so this is still valid.
-println!("{concat}") ;
+println!("{_concat}") ;
 
 //such weird rule exists with + operator, due to efficiency concerns the first str is owned while. the second one is borrowed whoch prevents the unnecessary copying of data. other reasons also exists.
 

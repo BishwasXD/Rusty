@@ -9,11 +9,11 @@
 //2.There can only be one owner at a time.
 //3.When the owner goes out of scope,the value will be dropped.
 
-pub fn ownership(){
+pub fn _ownership(){
     
     {
         //s is valid in this scope.
-        let s ="hello";
+        let _s ="hello";
         //one memory allocator needs to have one free memory assigned.
         //rust calls "drop"(free memory) automatically at closing of curly brackets. 
         
@@ -27,14 +27,14 @@ pub fn ownership(){
     println!("{s_a}");
 
     let x = 5;
-    let y =x; //basically means x=y=5
+    let _y =x; //basically means x=y=5
 
     //in case of strings
     //string are stored in the heap,while 3 parts are stored on stack??not sure (fact check this)
     //string is made of 3 parts:pointer to mem,length(amt of mem.) and capacity.Imagine kinda a like linked list.
    {
      let s1 = String::from("hello");
-    let s2 = s1;
+    let _s2 = s1;
     //println!("{s1},this") //doing this will throw error though.
 }
 //here in case of string s2 ,it copies all three parts of string but it does not copy the data on heap which pointer referes to.in detail fig:4-3
@@ -45,14 +45,14 @@ pub fn ownership(){
 //rust does'not automatically create a deep copy.
 {
     let s1 = String::from("hello");
-    let s2 = s1.clone(); //.clone method to deep copy the heap data as well.
+    let _s2 = s1.clone(); //.clone method to deep copy the heap data as well.
 }
 
 //integers are entirely stored on the stack.
 {
     //thats why this works for int but not for strings.
     let x = 5;
-    let y =x;
+    let _y =x;
 }
 //121
 //Remaining Still a lot of actual juice.

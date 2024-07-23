@@ -6,7 +6,7 @@ pub fn integer_types() {
 
     //constant
     //naming convention for rust constant:USE ALL UPPERCASE SEPARATED BY UNDERSCORE
-    const THIS_IS_A_CONSTANT: u32 = 10;
+    const _THIS_IS_A_CONSTANT: u32 = 10;
 
     //shadowing
     x = x - 1; //if var is declared with mut it has to be modified somewhere
