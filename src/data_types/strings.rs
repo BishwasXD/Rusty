@@ -25,7 +25,6 @@ let initial_cap = address.capacity();
 println!("Initial cap {}", initial_cap);
 println!("{:?}", ptr1);
 address.push_str(" Nepal");
-address.push_str(" - The capital city of Nepal");
 let new_cap = address.capacity();
 println!("New cap {}", new_cap);
 let ptr2 = address.as_ptr();
@@ -38,8 +37,8 @@ println!("{:?}", ptr2); //{:?},  ensures that pointer can be printed in a format
 
 //check palindrome:
 let  pattern: &str = "ababax";
-let mut result: String = String::from(""); //creating a instance of string from String struct. from converts one type into another in this case &str to String.
-let reverse: String = pattern.chars().rev().collect(); //chars convert string in array of char, rev reverses the arr, collect collects the chars from a iterator and converts to a str.(similar to ''.joined(array) method for this case, collect might be more powerful.)
+let _result: String = String::from(""); //creating a instance of string from String struct. from converts one type into another in this case &str to String.
+let _reverse: String = pattern.chars().rev().collect(); //chars convert string in array of char, rev reverses the arr, collect collects the chars from a iterator and converts to a str.(similar to ''.joined(array) method for this case, collect might be more powerful.)
 //now checking logic is easy.
 
 
@@ -53,7 +52,7 @@ println!("{s}");
 
 let hello:String = String::from("Hello");
 let world:String = String::from("world");
-let mut concat: String = hello + " " + &world; //here hello is moved, now we cannot access hello, but world is borrowed, which means the type of world is now in &str(in concat variable only).
+let concat: String = hello + " " + &world; //here hello is moved, now we cannot access hello, but world is borrowed, which means the type of world is now in &str(in concat variable only).
 // println!("{hello}"); //cant be done
 println!("{world}"); //world has the org data so this is still valid.
 println!("{concat}") ;
@@ -62,17 +61,31 @@ println!("{concat}") ;
 
 //2. Basic fns related to strings
 let a: &str = "Hello";
-println!("lenght : {}", a.len()); //outputs length(in byte);
+println!("length : {}", a.len()); //outputs length(in byte);
 //more about length:
-//for a here the output is 5 and 5 bytes are used to display it(the variable a has all the ascii characters, so 1 byte representation for each char).
-//when a is rep as a array of characters ['h','e','l','l','o'], every char is 4 byte so the length with be 20 byte.
+//for a here the output is 5 and 5 bytes are used to represent "Hello"(the variable a has all the ascii characters, so 1 byte representation for each char).
+//when a is rep as a array of characters ['H','e','l','l','o'], every char is 4 byte so the length will be 20 byte.
 //when there is a string of emoji(which is not an ascii character, the size of each char will be > than 1byte).
 
 
 println!("bytes : {:?}", a.bytes()); //gives a corresponding byte value assigned to a character, basically gives the UTF-8 encoding of a characters
-// println!("{}", a[0..2]); // this throws err coz the compiler has to know the exact size of the result before printing. the error is prob coz the result was directly used inside of a print statment. 
+// println!("{}", a[0..2]); // this throws err coz the compiler has to know the exact size of the result before printing.
 let sliced = &a[0..2];
 println!("slices string: {}", sliced);
+
+//3. setting string capacity:
+let mut cap = String::with_capacity(10); //reserving the capacity for a cap var
+cap.push_str("H"); //the capacity is 10 even with only one char, however capacity increases when string exceedes 10 bytes and another 10 bytes will be allocated.
+println!("String capacity is: {}", cap.capacity());
+
+
+//without reserving capacity:
+let nocap = String::from("h"); 
+println!("When capacity is not reserved {}", nocap.capacity()); //outputs one
+
+
+//you can also do pattern matching with strings using regex.
+
 
 
 }
