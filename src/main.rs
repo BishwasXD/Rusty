@@ -1,14 +1,26 @@
-
-pub mod data_types{
-    pub mod strings; 
-    pub mod numbers; //approach without declaring in mod.rs, now the files are not treated as module.
+ pub mod data_types{
+//     pub mod strings; 
+//     pub mod numbers; 
+       pub mod array;
 }
 mod loops{
     pub mod loops;
    // pub mod fibonacci_loops;
 }
+mod ownership{
+ pub mod ownership;
+}
+
+// mod structs{
+//     pub mod structures;
+// }
+
+// mod simple_programs{
+//     pub mod fibonacii;
+// }
 
 fn main() {
-    data_types::strings::strings_types();
-    data_types::numbers::integer_types();
+    // simple_programs::fibonacii::fibonacci();
+   data_types::array::array_basics();
+    
 }

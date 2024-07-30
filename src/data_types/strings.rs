@@ -55,7 +55,7 @@ let world:String = String::from("world");
 let concat: String = hello + " " + &world; //here hello is moved, now we cannot access hello, but world is borrowed, which means the type of world is now in &str(in concat variable only).
 // println!("{hello}"); //cant be done
 println!("{world}"); //world has the org data so this is still valid.
-println!("{concat}") ;
+println!("{_concat}") ;
 
 //such weird rule exists with + operator, due to efficiency concerns the first str is owned while. the second one is borrowed whoch prevents the unnecessary copying of data. other reasons also exists.
 

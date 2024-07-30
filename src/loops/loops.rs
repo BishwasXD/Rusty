@@ -1,4 +1,4 @@
-pub fn inner_loops(){
+pub fn _inner_loops(){
     let mut counter = 0;
     let result= loop{
        counter+=1;
@@ -11,7 +11,7 @@ pub fn inner_loops(){
 }
 
 //Labeling the loops
-pub fn label_loops() {
+pub fn _label_loops() {
  let mut count = 0;
  //label the loop using ('name)
  'counting_up: loop {
@@ -33,7 +33,7 @@ pub fn label_loops() {
 }
 
 //For loop
-pub fn for_loops(){
+pub fn _for_loops(){
     let a=[10,20,30,40,50];
  for element in a {
     println!("The value is: {element}");
@@ -45,4 +45,3 @@ pub fn for_loops(){
     println!("Decreasing");
  }
 }
-

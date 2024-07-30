@@ -1,26 +1,38 @@
 
-//*File to write some newbie shit for personal shit
-//*This is for reference purposes */
-//create a project with cargo ---> cargo new ProjectName
+File to write some newbie shit for personal shit
+This is for reference purposes 
 
-//rustc main.rs
-//  ./main.exe
+create a project with cargo ---> cargo new ProjectName
 
-//cargo build
-//builds inside target\debug
+rustc main.rs
+  ./main.exe
 
-//cargo run
-//build and run executable
+cargo build
+builds inside target\debug
 
-//cargo build --release
-//for final build with optimization takes long to compile
+cargo run
+build and run executable
+
+cargo build --release
+for final build with optimization takes long to compile
 
 
-//cargo check ---> check for problems but doesnot compile the code so faster
+cargo check ---> check for problems but doesnot compile the code so faster
 
-//rustfmt nameOffile.rs(in cmd) 
-//format your rust code
+rustfmt nameOffile.rs(in cmd) 
+format your rust code
 
-//mod.rs
+mod.rs
 -> When you have a directory in rust, you have bunch of sub_modules in it, by declaring those sub_modules in mod.rs it serves as a entry point to the module. 
 -> we can do the similar operation without using mod.rs as well
+
+
+
+Shallow Copy: shallow copy copies the reference of a data. modifying one data will affect other data as well, however in case of rust the concept of shallow 
+              copy works differently, while using shallow copy in rust the ownernship of data is transfered to other data, only one copy of data is maintained in 
+              the heap. and only new owner is accessible.
+             
+Deep Copy: In deep copy new heap will be allocated for the other data, now both the data are independent and both are the owner. modifying one data will not change the 
+           other data.
+
+          -> program execution in ownernship.rs

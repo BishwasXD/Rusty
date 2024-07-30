@@ -1,0 +1,11 @@
+1. Different types of formatters:
+
+a) {} -> these type of formatter are used for formatting user centric output such as string, number, float etc. which normal user sees
+         and can understand what it is actually is.
+
+         eg: like formatting for name, age, address, today's temperature.
+
+b) {:?} -> these type of formatter are developers centric and use to format datas not understood by normal users, mainly used for debugging
+           purpose.
+
+           eg: array, memory address, structure etc..
