@@ -15,12 +15,15 @@ mod ownership{
 //     pub mod structures;
 // }
 
-// mod simple_programs{
-//     pub mod fibonacii;
-// }
+mod simple_programs{
+    pub mod two_sum;
+}
 
 fn main() {
     // simple_programs::fibonacii::fibonacci();
-   data_types::array::array_basics();
+//    data_types::array::array_basics();
+const NUMS: [i32; 4] = [2,7,11,15];
+const TARGET: i32 = 9;
+simple_programs::two_sum::two_sum(TARGET, NUMS);
     
 }
