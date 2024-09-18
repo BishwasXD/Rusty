@@ -12,9 +12,10 @@ mod ownership{
  pub mod ownership;
 }
 
-// mod structs{
-//     pub mod structures;
-// }
+mod structs{
+    pub mod structures;
+
+}
 
 mod simple_programs{
     // pub mod two_sum;
@@ -33,8 +34,10 @@ fn main() {
 // simple_programs::factorial::calc_factorial(NUM);
 // const HEIGHT: [usize;9] = [1,8,6,2,5,4,8,3,7];
 // simple_programs::leetcode11::container_with_most_water(HEIGHT);
-const BLUEPRINT: &str = "b3c6d4";
-simple_programs::build_pattern::build_pattern(BLUEPRINT);
+// const BLUEPRINT: &str = "b3c6d4";
+// simple_programs::build_pattern::build_pattern(BLUEPRINT);
+structs::structures::_structures();
+structs::structures::associated_fns();
 
     
 }
