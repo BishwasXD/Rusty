@@ -16,6 +16,9 @@ mod structs{
     pub mod structures;
 
 }
+mod enums{
+    pub mod enums;
+}
 
 mod simple_programs{
     // pub mod two_sum;
@@ -38,6 +41,7 @@ fn main() {
 // simple_programs::build_pattern::build_pattern(BLUEPRINT);
 structs::structures::_structures();
 structs::structures::associated_fns();
+enums::enums::enums_basics();
 
     
 }
