@@ -19,7 +19,9 @@ mod structs{
 mod enums{
     pub mod enums;
 }
-
+mod match_basics{
+    pub mod match_basics;
+}
 mod simple_programs{
     // pub mod two_sum;
     // pub mod factorial;
@@ -39,9 +41,10 @@ fn main() {
 // simple_programs::leetcode11::container_with_most_water(HEIGHT);
 // const BLUEPRINT: &str = "b3c6d4";
 // simple_programs::build_pattern::build_pattern(BLUEPRINT);
-structs::structures::_structures();
-structs::structures::associated_fns();
-enums::enums::enums_basics();
+// structs::structures::_structures();
+// structs::structures::associated_fns();
+// enums::enums::enums_basics();
+match_basics::match_basics::match_basics();
 
     
 }
