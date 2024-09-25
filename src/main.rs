@@ -53,4 +53,6 @@ fn main() {
     match_basics::match_basics::match_basics();
     check_mod::check();
     collections::vectors::vector_basics::vector();
+    collections::vectors::vector_basics::iterating_vector();
+
 }
