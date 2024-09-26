@@ -67,7 +67,7 @@ pub mod vector_basics {
         for num in &mut v {
             println!("{}", *num * 2);
 
-            //see the * before num, it a deferencer operator(more in later chap).
+            //see the * before num, it a dereference operator(more in later chap).
         }
 
         // v.push(20); THIS CANNOT BE DONE IF WE ARE USING VALUE TO LOOP
