@@ -1,6 +1,7 @@
 pub mod collections {
     pub mod vectors;
     pub mod strings;
+    pub mod hashmap;
 }
 pub mod data_types {
     //     pub mod strings;
@@ -55,6 +56,7 @@ fn main() {
     // check_mod::check();
     // collections::vectors::vector_basics::vector();
     // collections::vectors::vector_basics::iterating_vector();
-    collections::strings::string::string_basics();
+    // collections::strings::string::string_basics();
+    collections::hashmap::hashmap::hashmap();
 
 }
