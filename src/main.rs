@@ -3,6 +3,11 @@ pub mod collections {
     pub mod strings;
     pub mod hashmap;
 }
+pub mod error_handling{
+    pub mod Errors;
+    pub mod unrecoverable_errors;
+    pub mod recoverable_errors;
+}
 pub mod data_types {
     //     pub mod strings;
     //     pub mod numbers;
@@ -35,7 +40,7 @@ mod check_mod {
     pub fn check() {
         println!("checking the working of a inline module.");
     }
-}
+}   
 
 fn main() {
     // simple_programs::fibonacii::fibonacci();
@@ -57,6 +62,9 @@ fn main() {
     // collections::vectors::vector_basics::vector();
     // collections::vectors::vector_basics::iterating_vector();
     // collections::strings::string::string_basics();
-    collections::hashmap::hashmap::hashmap();
+    // collections::hashmap::hashmap::hashmap();
+    error_handling::Errors::ErrorHandling::error_handling();
+    // error_handling::unrecoverable_errors::UnrecoverableError::panic();
+    error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
 
 }
