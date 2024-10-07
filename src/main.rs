@@ -42,6 +42,9 @@ mod check_mod {
     }
 }   
 
+mod writing_test{
+    pub mod tests;
+}
 fn main() {
     // simple_programs::fibonacii::fibonacci();
     //    data_types::array::array_basics();
@@ -66,5 +69,6 @@ fn main() {
     error_handling::Errors::ErrorHandling::error_handling();
     // error_handling::unrecoverable_errors::UnrecoverableError::panic();
     error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
+    writing_test::tests::add(3, 4);
 
 }
