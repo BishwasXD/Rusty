@@ -31,3 +31,17 @@ mod testers{
         panic!("Makes it go boom")
     }
 }
+ 
+ //assert! macro is useful to ensure that some condition in a test evaluates to true
+#[derive(Debug)]
+struct Rectangle {
+    width:u32,
+    height:u32,
+}
+
+//can_hold method returns a Boolean
+impl Rectangle{
+    fn can_hold(&self,other:Rectangle)->bool{
+        self.width>other.width && self.height > other.height
+    }
+}

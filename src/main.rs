@@ -44,6 +44,7 @@ mod check_mod {
 
 mod writing_test{
     pub mod tests;
+    pub mod tests2;
 }
 fn main() {
     // simple_programs::fibonacii::fibonacci();
