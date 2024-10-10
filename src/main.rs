@@ -1,12 +1,12 @@
 pub mod collections {
-    pub mod vectors;
-    pub mod strings;
     pub mod hashmap;
+    pub mod strings;
+    pub mod vectors;
 }
-pub mod error_handling{
+pub mod error_handling {
     pub mod Errors;
-    pub mod unrecoverable_errors;
     pub mod recoverable_errors;
+    pub mod unrecoverable_errors;
 }
 pub mod data_types {
     //     pub mod strings;
@@ -35,14 +35,15 @@ mod simple_programs {
     // pub mod factorial;
     // pub mod leetcode11;
     pub mod build_pattern;
+    pub mod compression;
 }
 mod check_mod {
     pub fn check() {
         println!("checking the working of a inline module.");
     }
-}   
+}
 
-mod writing_test{
+mod writing_test {
     pub mod tests;
     pub mod tests2;
 }
@@ -67,9 +68,9 @@ fn main() {
     // collections::vectors::vector_basics::iterating_vector();
     // collections::strings::string::string_basics();
     // collections::hashmap::hashmap::hashmap();
-    error_handling::Errors::ErrorHandling::error_handling();
+    // error_handling::Errors::ErrorHandling::error_handling();
     // error_handling::unrecoverable_errors::UnrecoverableError::panic();
-    error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
-    writing_test::tests::add(3, 4);
-
+    // error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
+    // writing_test::tests::add(3, 4);
+    simple_programs::compression::compression();
 }
