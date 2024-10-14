@@ -23,7 +23,7 @@ pub mod UnrecoverableError{
 
         //USING PANIC BACKTRACE:
         //lets us take a look at another example where the panic occurs due to some lib.
-        let vec = vec![1,2,3];
+        let vec: Vec<i32> = vec![1,2,3];
         vec[99];
 
         //in C if u do this this is a undefined behavior, instead of panicking and immediatley stopping the exec

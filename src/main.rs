@@ -61,7 +61,7 @@ fn main() {
     // simple_programs::build_pattern::build_pattern(BLUEPRINT);
     // structs::structures::_structures();
     // structs::structures::associated_fns();
-    enums::enums::enums_basics();
+    // enums::enums::enums_basics();
     // match_basics::match_basics::match_basics();
     // check_mod::check();
     // collections::vectors::vector_basics::vector();
@@ -70,7 +70,7 @@ fn main() {
     // collections::hashmap::hashmap::hashmap();
     // error_handling::Errors::ErrorHandling::error_handling();
     // error_handling::unrecoverable_errors::UnrecoverableError::panic();
-    // error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
+    error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
     // writing_test::tests::add(3, 4);
     // simple_programs::compression::compression();
 }

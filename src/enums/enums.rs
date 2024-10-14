@@ -171,7 +171,7 @@ pub fn enums_basics() {
     //*************************************Catch-All patterns and _the placeholder*************|
     //using enums we can also define a way in which certain values cause special action while all
     //other values cause a default action
-    let dire_roll = 9;
+    let dice_roll = 9;
     match dice_roll {
         3 => add_fancy_hat(),
         7 => remove_fancy_hat(),
