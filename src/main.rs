@@ -47,6 +47,9 @@ mod writing_test {
     pub mod tests;
     pub mod tests2;
 }
+mod generic_traits_lifetime {
+    pub mod generics;
+}
 fn main() {
     // simple_programs::fibonacii::fibonacci();
     //    data_types::array::array_basics();
@@ -73,4 +76,5 @@ fn main() {
     // error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
     // writing_test::tests::add(3, 4);
     // simple_programs::compression::compression();
+    generic_traits_lifetime::generics::generics();
 }
