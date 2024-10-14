@@ -93,5 +93,96 @@ if let Some(max)  = config_matrix{
     println!("The maximum is configured to be {max}");
 }
 
-    
+   //some error were made
+ 
+    // ************************************Control Flow Construct(match)*********************************************
+    //match :allows to compare a value against series of pattern and then execute code based on
+    //pattern matches,yes u can do this using if else.match is good to use with enums.
+    #[derive(Debug)] //to inspect state
+    enum UsState {
+        Alabama,
+        Alaska,
+    }
+    enum Coins {
+        Penny,
+        Nickel,
+        Dime,
+        Quarter(UsState),
+    }
+    //if return boolean to check however match can return any kind of data
+    fn value_in_cents(coin: Coins) -> u8 {
+        match coin {
+            Coins::Penny => {
+                println!("lucky coin");
+                1
+            }
+            Coins::Nickel => 5,
+            Coins::Dime => 10,
+            Coins::Quarter(state) => {
+                println!("State quarter from{:?}!", state);
+                25
+            }
+        }
+    }
+    value_in_cents(Coins::Quarter(UsState::Alaska));
+    //**************************Matching with Option<T>
+
+    fn pluss_one(x: Option<i32>) -> Option<i32> {
+        match x {
+            None => None, //must specify all the condition or else it will show error
+            Some(i) => Some(i + 1),
+        }
+    }
+    let five = Some(5);
+    let six = pluss_one(five);
+    let none = pluss_one(None);
+
+    //*************************************Catch-All patterns and _the placeholder*************|
+    //using enums we can also define a way in which certain values cause special action while all
+    //other values cause a default action
+    let dice_roll = 9;
+    match dice_roll {
+        3 => add_fancy_hat(),
+        7 => remove_fancy_hat(),
+        _ => reroll(), //here '_' is a special pattern that matches any value and doesnot bind to
+        //that value,meaning if it is not 3 or 7,the dice will keep rolling until it gets that.
+        // other => move_player(other), //it is the default value if the received value is not 3 or
+        // 7
+        _ => (), //nothing happens if it isnt 3 or 7
+    }
+    fn add_fancy_hat() {}
+    fn remove_fancy_hat() {}
+    fn move_player(num_spaces: u8) {}
+    fn reroll() {}
+    // *****************************Consise Control Flow with if let*****
+    //if let syntax lets you combine if and let to handle values that match one pattern while
+    //ignoring the rest.
+    let config_max = Some(3u8);
+    match config_max {
+        Some(max) => println!("The maximum is configured to be{max}"),
+        _ => (),
+    }
+    //Same code using if let
+    let config_max = Some(3u8);
+    if let Some(max) = config_max {
+        println!("The max is{max}");
+    }
+    //u can add else with if let
+    // //Example of match using above code
+    // let mut count = 0;
+    // fn value_cents(coin: Coins) -> u8 {
+    //     match coin {
+    //         Coins::Quarter(state) => println!("State{:?}!", state),
+    //         _ => count += 1,
+    //     }
+    // }
+    // using if let and else
+    // let mut count=0;
+    // if let Coin:Quarter(state)=coin{
+    // println!("{:?}!,state");
+    // }
+    // else{
+    // count+=1;
+    // }
+
 }
