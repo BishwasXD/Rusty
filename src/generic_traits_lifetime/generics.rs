@@ -39,7 +39,7 @@ pub fn generics() {
         x: T,
         y: T,
     }
-    let wont_work = Point { x: 5, y: 4.0 }; //mismatched data types
+    let wont_work: Point<i32> = Point { x: 5, y: 4.0 }; //mismatched data types
                                             //if u want to use two types of data in generics use different names
     struct Double<T, U> {
         x: T,
