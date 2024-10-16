@@ -25,10 +25,10 @@ pub fn generics() {
         //declaring generics
         let mut largest = &list[0];
         for item in list {
-            if item > largest {
-                //use std::cmp::PartialOrd or else error
-                largest = item;
-            }
+            // if item > largest {
+            //     //use std::cmp::PartialOrd or else error
+            //     largest = item;
+            // }
         }
         largest
         //since the code is same for largest_char and largest_i32,this generic function should work for
@@ -39,7 +39,7 @@ pub fn generics() {
         x: T,
         y: T,
     }
-    let wont_work: Point<i32> = Point { x: 5, y: 4.0 }; //mismatched data types
+   // let wont_work: Point<i32> = Point { x: 5, y: 4.0 }; //mismatched data types
                                             //if u want to use two types of data in generics use different names
     struct Double<T, U> {
         x: T,

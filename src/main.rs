@@ -50,6 +50,9 @@ mod writing_test {
 mod generic_traits_lifetime {
     pub mod generics;
 }
+mod concurrencies{
+    pub mod concurrency;
+}
 fn main() {
     // simple_programs::fibonacii::fibonacci();
     //    data_types::array::array_basics();
@@ -73,8 +76,8 @@ fn main() {
     // collections::hashmap::hashmap::hashmap();
     // error_handling::Errors::ErrorHandling::error_handling();
     // error_handling::unrecoverable_errors::UnrecoverableError::panic();
-    error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
+   // error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
     // writing_test::tests::add(3, 4);
     // simple_programs::compression::compression();
-    generic_traits_lifetime::generics::generics();
+    concurrencies::concurrency::concurrency();
 }
