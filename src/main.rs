@@ -8,6 +8,10 @@ pub mod error_handling {
     pub mod recoverable_errors;
     pub mod unrecoverable_errors;
 }
+pub mod smart_pointers{
+    pub mod smart_pointers;
+    pub mod box_pointers;
+}
 pub mod data_types {
     //     pub mod strings;
     //     pub mod numbers;
@@ -79,5 +83,7 @@ fn main() {
    // error_handling::recoverable_errors::RecoverableErrors::recoverable_errors();
     // writing_test::tests::add(3, 4);
     // simple_programs::compression::compression();
-    concurrencies::concurrency::concurrency();
+    // concurrencies::concurrency::concurrency();
+  smart_pointers::smart_pointers::smart_pointers();
+  smart_pointers::box_pointers::box_pointers();
 }
