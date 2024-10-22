@@ -1,5 +1,6 @@
 use std::ops::Deref;
 
+use crate::ownership;
 pub fn box_pointers(){
     let b = Box::new(5);
     println!("b is {b}");
@@ -105,4 +106,34 @@ pub fn box_pointers(){
       println!("Hello, {name}!");
   }
 
-}
+  //the second trait to implement is a drop trait, this lets the value to be dropped when it goes out of scope
+  impl <T> Drop for MyBox<T>{
+
+      fn drop(&mut self) {
+          println!("dropping value as it went outta scope");
+      }
+  }
+  {
+  let d_val = MyBox::new(30); 
+  }
+  //values are dropped in reverse order of theor creation
+  //we can also drop the value early
+
+  let early_drop = MyBox::new("xyz");
+  drop(early_drop); //ownership is moved so can call this
+  //cant do early_drop.drop()  kinaki esma ownership move hunna ani drop le val lai drop garcha suruma
+  // ani scope end bhayesi rust le feri tyo val lai drop garna khojcha since typ val is still valid
+    //causing double free error
+
+  //eg to see obj.method donot move ownership
+//   impl <T> MyBox<T>{
+//     fn greet(&self) -> &str{
+//       return "greet new BOX"
+//     }
+//   }
+// let new = MyBox::new("hi");
+// new.greet();
+// println!("{new:?}")
+
+  }
+
