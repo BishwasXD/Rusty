@@ -11,6 +11,7 @@ pub mod error_handling {
 pub mod smart_pointers{
     pub mod smart_pointers;
     pub mod box_pointers;
+    pub mod reference_counted;
 }
 pub mod data_types {
     //     pub mod strings;
@@ -24,9 +25,14 @@ mod loops {
 mod ownership {
     pub mod ownership;
 }
-
+mod macros{
+    pub mod macros;
+}
 mod structs {
     pub mod structures;
+}
+mod asynchronous{
+    pub mod asynchronous;
 }
 mod enums {
     pub mod enums;
@@ -84,6 +90,9 @@ fn main() {
     // writing_test::tests::add(3, 4);
     // simple_programs::compression::compression();
     // concurrencies::concurrency::concurrency();
-  smart_pointers::smart_pointers::smart_pointers();
-  smart_pointers::box_pointers::box_pointers();
+  // smart_pointers::smart_pointers::smart_pointers();
+  // smart_pointers::box_pointers::box_pointers();
+  // smart_pointers::reference_counted::reference_counted_smart_pointers();
+asynchronous::asynchronous::asynchronous();
+  // macros::macros::macros();
 }
